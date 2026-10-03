@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - IPSI Nusantara</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                  rgba(0, 40, 20, 0.45),
+                  rgba(0, 40, 20, 0.45)
+                ),
+                url("WhatsApp\ Image\ 2026-10-03\ at\ 11.50.30.jpeg");
+
+            background-size: cover;
+            background-position: center;
+
+            overflow: hidden;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 92%;
+            height: 48px;
+
+            background: #17213d;
+
+            border-radius: 30px;
+
+            margin: 20px auto;
+
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            animation: fadeDown 1s ease;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: white;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .logo-icon {
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+            color: white;
+        }
+
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+
+        .menu a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        .menu a:hover {
+            color: #a7d9a9;
+        }
+
+
+        /* ================= GALERI ================= */
+
+        .gallery {
+            width: 90%;
+            height: calc(100vh - 105px);
+
+            margin: auto;
+
+            position: relative;
+        }
+
+
+        /* ================= BINGKAI FOTO ================= */
+
+        .photo {
+            position: absolute;
+
+            width: 245px;
+            height: 185px;
+
+            background: white;
+
+            padding: 7px;
+
+            border: 3px solid rgba(255,255,255,0.9);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.3);
+
+            overflow: hidden;
+        }
+
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* FOTO KIRI ATAS */
+
+        .photo1 {
+            left: 10%;
+            top: 10%;
+
+            border-radius: 10px;
+
+            transform: rotate(-2deg);
+
+            animation: fadeLeft 1s ease;
+        }
+
+
+        /* FOTO KANAN ATAS */
+
+        .photo2 {
+            right: 8%;
+            top: 13%;
+
+            border-radius: 10px;
+
+            transform: rotate(2deg);
+
+            animation: fadeRight 1s ease;
+        }
+
+
+        /* FOTO KIRI BAWAH */
+
+        .photo3 {
+            left: 10%;
+            bottom: 13%;
+
+            border-radius: 10px;
+
+            transform: rotate(2deg);
+
+            animation: fadeLeft 1.2s ease;
+        }
+
+
+        /* FOTO KANAN BAWAH */
+
+        .photo4 {
+            right: 9%;
+            bottom: 11%;
+
+            border-radius: 20px;
+
+            transform: rotate(-2deg);
+
+            animation: fadeRight 1.2s ease;
+        }
+
+
+        /* ================= VIDEO TENGAH ================= */
+
+        .video-frame {
+            position: absolute;
+
+            width: 220px;
+            height: 350px;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background: white;
+
+            padding: 8px;
+
+            border-radius: 16px;
+
+            border: 3px solid rgba(255,255,255,0.9);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.4);
+
+            overflow: hidden;
+
+            animation: zoomIn 1.2s ease;
+        }
+
+
+        .video-frame video {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 9px;
+        }
+
+
+        /* ================= NEXT ================= */
+
+        .next {
+            position: absolute;
+
+            left: 50%;
+            bottom: 2%;
+
+            transform: translateX(-50%);
+
+            padding: 10px 25px;
+
+            background: #8fd694;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            border-radius: 25px;
+
+            transition: 0.3s;
+
+            animation: fadeUp 1.3s ease;
+        }
+
+
+        .next:hover {
+            background: #6fbd76;
+
+            transform: translateX(-50%) scale(1.05);
+        }
+
+
+        /* ================= ANIMASI ================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes fadeLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        @keyframes fadeRight {
+
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        @keyframes zoomIn {
+
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translate(-50%, 30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            body {
+                overflow-y: auto;
+            }
+
+            .gallery {
+                height: auto;
+                min-height: 800px;
+            }
+
+            .photo {
+                width: 140px;
+                height: 95px;
+            }
+
+            .video-frame {
+                width: 150px;
+                height: 220px;
+            }
+
+            .menu {
+                gap: 15px;
+            }
+
+            .menu a {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <div class="logo-icon">🥋</div>
+
+            <span>IPSI NUSANTARA</span>
+
+        </div>
+
+
+        <div class="menu">
+
+            <a href="index.html">HOME</a>
+
+            <a href="about.html">ABOUT</a>
+
+            <a href="prestasi.html">PRESTASI</a>
+
+            <a href="galeri.html">GALERI</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= GALERI ================= -->
+
+    <section class="gallery">
+
+
+        <!-- FOTO 1 -->
+
+        <div class="photo photo1">
+
+            <img
+                src="seni.jfif"
+                alt="Galeri Pencak Silat"
+            >
+
+        </div>
+
+
+        <!-- FOTO 2 -->
+
+        <div class="photo photo2">
+
+            <img
+                src="WhatsApp Image 2026-10-03 at 11.50.40.jpeg"
+                alt="Galeri Pencak Silat"
+            >
+
+        </div>
+
+
+        <!-- ================= VIDEO TENGAH ================= -->
+
+        <div class="video-frame">
+
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+            >
+                <source src="WhatsApp Video 2026-10-03 at 12.55.53.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+
+
+        <!-- FOTO 3 -->
+
+        <div class="photo photo3">
+
+            <img
+                src="WhatsApp Image 2026-10-03 at 11.50.39.jpeg"
+                alt="Galeri Pencak Silat"
+            >
+
+        </div>
+
+
+        <!-- FOTO 4 -->
+
+        <div class="photo photo4">
+
+            <img
+                src="tanding.jfif"
+                alt="Galeri Pencak Silat"
+            >
+
+        </div>
+
+
+</body>
+</html>

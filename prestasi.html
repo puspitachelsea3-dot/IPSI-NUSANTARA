@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi - IPSI Nusantara</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* =========================
+           ANIMASI
+        ========================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .prestasi {
+            width: 100%;
+            height: 100vh;
+
+            position: relative;
+
+            background-image:
+                linear-gradient(
+                   rgba(0, 40, 20, 0.45),
+                   rgba(0, 40, 20, 0.45)
+                ),
+                url("WhatsApp\ Image\ 2026-10-03\ at\ 11.50.30.jpeg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: absolute;
+
+            top: 7%;
+            left: 6%;
+            right: 6%;
+
+            height: 48px;
+
+            background: #1d304c;
+
+            border-radius: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 25px;
+
+            animation: fadeDown 1s ease forwards;
+
+            z-index: 10;
+        }
+
+        .logo {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .judul {
+            position: absolute;
+
+            top: 18%;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 35px;
+
+            animation: fadeDown 1s ease 0.3s both;
+        }
+
+        /* =========================
+           BOX
+        ========================= */
+
+        .box {
+            position: absolute;
+
+            width: 240px;
+
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .box h2 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .daerah {
+            left: 8%;
+            top: 43%;
+
+            animation-name: fadeLeft;
+            animation-delay: 0.4s;
+        }
+
+        .provinsi {
+            left: 29%;
+            top: 58%;
+
+            animation-name: fadeUp;
+            animation-delay: 0.6s;
+        }
+
+        .nasional {
+            right: 27%;
+            top: 43%;
+
+            animation-name: fadeRight;
+            animation-delay: 0.8s;
+        }
+
+        .internasional {
+            right: 7%;
+            top: 58%;
+
+            animation-name: fadeUp;
+            animation-delay: 1s;
+        }
+
+        /* =========================
+           DAUN
+        ========================= */
+
+        .leaf-left {
+            position: absolute;
+
+            left: -30px;
+            bottom: -20px;
+
+            width: 170px;
+            height: 220px;
+
+            border-radius: 80% 20% 80% 20%;
+
+            background: rgba(74,125,66,0.6);
+
+            transform: rotate(25deg);
+
+            animation: fadeLeft 1.2s ease 0.5s both;
+        }
+
+        .leaf-right {
+            position: absolute;
+
+            right: -30px;
+            top: 35%;
+
+            width: 170px;
+            height: 220px;
+
+            border-radius: 20% 80% 20% 80%;
+
+            background: rgba(74,125,66,0.6);
+
+            transform: rotate(-25deg);
+
+            animation: fadeRight 1.2s ease 0.7s both;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="prestasi">
+
+    <nav>
+
+        <div class="logo">
+            🥋 IPSI NUSANTARA
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="prestasi.html">PRESTASI</a></li>
+            <li><a href="galeri.html">GALERI</a></li>
+        </ul>
+
+    </nav>
+
+
+    <h1 class="judul">
+        Jenjang Prestasi Pencak Silat
+    </h1>
+
+
+    <div class="box daerah">
+
+        <h2>Tingkat Daerah</h2>
+
+        <p>
+            Prestasi tingkat daerah merupakan pencapaian
+            yang diperoleh dalam kejuaraan pencak silat
+            di tingkat kabupaten atau kota.
+        </p>
+
+    </div>
+
+
+    <div class="box provinsi">
+
+        <h2>Tingkat Provinsi</h2>
+
+        <p>
+            Atlet yang berhasil meraih prestasi daerah
+            dapat melanjutkan kejuaraan pada tingkat
+            provinsi dan mewakili daerahnya.
+        </p>
+
+    </div>
+
+
+    <div class="box nasional">
+
+        <h2>Tingkat Nasional</h2>
+
+        <p>
+            Tingkat nasional mempertemukan atlet dari
+            berbagai daerah di Indonesia dalam
+            kejuaraan pencak silat nasional.
+        </p>
+
+    </div>
+
+
+    <div class="box internasional">
+
+        <h2>Tingkat Internasional</h2>
+
+        <p>
+            Prestasi internasional merupakan pencapaian
+            tertinggi ketika atlet bertanding mewakili
+            Indonesia dalam kompetisi antarnegara.
+        </p>
+
+    </div>
+
+
+    <div class="leaf-left"></div>
+    <div class="leaf-right"></div>
+
+</div>
+
+</body>
+</html>

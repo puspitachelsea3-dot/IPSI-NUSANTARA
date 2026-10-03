@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - IPSI Nusantara</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 40, 20, 0.45),
+                    rgba(0, 40, 20, 0.45)
+                ),
+                url("WhatsApp\ Image\ 2026-10-03\ at\ 11.50.30.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+            overflow: hidden;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 92%;
+            height: 48px;
+
+            background: #1d304c;
+
+            border-radius: 30px;
+
+            margin: 20px auto;
+
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            animation: fadeDown 1s ease;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: white;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            font-size: 18px;
+        }
+
+
+        /* MENU */
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .menu a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #a7d9a9;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-container {
+            width: 90%;
+            height: calc(100vh - 100px);
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 55px;
+        }
+
+
+        /* ================= FOTO ================= */
+
+        .photos {
+            width: 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 25px;
+
+            animation: fadeLeft 1.2s ease;
+        }
+
+
+        .photo-frame {
+            width: 180px;
+            height: 220px;
+
+            background: white;
+
+            padding: 9px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* BINGKAI FOTO 1 */
+
+        .photo-one {
+            border-radius: 18px;
+
+            transform: rotate(-4deg);
+
+            border: 3px solid rgba(255,255,255,0.85);
+        }
+
+
+        /* BINGKAI FOTO 2 */
+
+        .photo-two {
+            border-radius: 5px 20px 5px 20px;
+
+            transform: rotate(4deg);
+
+            border: 3px solid rgba(255,255,255,0.85);
+        }
+
+
+        /* ================= TEXT ================= */
+
+        .about-text {
+            width: 48%;
+
+            animation: fadeRight 1.2s ease;
+        }
+
+
+        .about-text h1 {
+            font-size: 48px;
+
+            margin-bottom: 22px;
+
+            color: white;
+        }
+
+
+        .about-text p {
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            text-align: justify;
+
+            color: white;
+
+            max-width: 700px;
+        }
+
+
+        /* ================= ANIMASI ================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes fadeLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        @keyframes fadeRight {
+
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            body {
+                overflow-y: auto;
+            }
+
+            .about-container {
+                flex-direction: column;
+                height: auto;
+
+                padding: 40px 0;
+            }
+
+            .photos {
+                width: 100%;
+            }
+
+            .about-text {
+                width: 90%;
+            }
+
+            .about-text h1 {
+                font-size: 38px;
+            }
+
+            .about-text p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            🥋 IPSI NUSANTARA
+        </div>
+
+
+        <div class="menu">
+
+            <a href="index.html">HOME</a>
+
+            <a href="about.html">ABOUT</a>
+
+            <a href="prestasi.html">PRESTASI</a>
+
+            <a href="galeri.html">GALERI</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-container">
+
+
+        <!-- FOTO -->
+
+        <div class="photos">
+
+            <div class="photo-frame photo-one">
+
+                <img
+                    src="WhatsApp Image 2026-10-03 at 11.50.30 (1).jpeg"
+                    alt="Pencak Silat"
+                >
+
+            </div>
+
+
+            <div class="photo-frame photo-two">
+
+                <img
+                    src="ipsi.jfif"
+                    alt="Pencak Silat"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TEXT -->
+
+        <div class="about-text">
+
+            <h1>
+                Apa itu IPSI?
+            </h1>
+
+
+            <p>
+                Ikatan Pencak Silat Indonesia (IPSI) merupakan organisasi
+                yang menjadi wadah bagi perkembangan pencak silat di
+                Indonesia. IPSI berperan dalam membina, mengembangkan,
+                dan melestarikan pencak silat sebagai olahraga sekaligus
+                bagian dari budaya bangsa. Pencak silat sendiri merupakan
+                seni bela diri tradisional Indonesia yang memiliki unsur
+                bela diri, olahraga, seni, serta pembentukan karakter.
+                IPSI didirikan pada 18 Mei 1948 di Surakarta, Jawa Tengah
+                sebagai upaya menyatukan dan mengembangkan berbagai
+                organisasi pencak silat di Indonesia.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</body>
+</html>
